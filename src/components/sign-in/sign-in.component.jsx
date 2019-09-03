@@ -55,6 +55,7 @@ export default class SignIn extends Component {
             handleChange={this.handleChange}
             required
             label="password"
+            autoComplete="true"
           />
           <div className="buttons">
             <CustomButton type="submit">Sign In</CustomButton>
