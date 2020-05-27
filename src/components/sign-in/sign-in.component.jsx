@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./sign-in.styles.scss";
+import styles from "./sign-in.module.scss";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
@@ -40,7 +40,7 @@ export default class SignIn extends Component {
 
   render() {
     return (
-      <div className="sign-in">
+      <div className={styles["sign-in"]}>
         <h2> I already have an account</h2>
         <span> Sign in with your email and password </span>
 
@@ -62,7 +62,7 @@ export default class SignIn extends Component {
             label="password"
             autoComplete="true"
           />
-          <div className="buttons">
+          <div className={styles.buttons}>
             <CustomButton type="submit">Sign In</CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
               {" "}
