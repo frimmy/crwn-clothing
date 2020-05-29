@@ -13,7 +13,7 @@ const CollectionPage = ({collection, match}) => {
   const { title, items } = collection;
   return (
     <div className={styles['collection-page']}>
-      <h2 className={styles.title}>{title }</h2>
+      <h2 className={styles.title}>{title}</h2>
       <div className={styles.items}>
         {
           items.map(item => (
