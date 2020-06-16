@@ -1,16 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 import { selectCollection } from "../../redux/shop/shop.selectors";
 
 import styles from "./collection.module.scss";
-
 import CollectionItem from "../../components/collection-item/collection-item.component";
 
-const CollectionPage = ({ collection, match }) => {
-  console.log({ collection });
-  console.log({ match });
-
+const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   return (
     <div className={styles["collection-page"]}>
