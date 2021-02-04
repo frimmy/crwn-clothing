@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import path from "path";
 import dotenv from "dotenv";
 import Stripe from "stripe";
-
+import { fileURLToPath } from "url";
 if (process.env.NODE_ENV !== "production") dotenv.config();
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
   app.use(express.static(path.join(__dirname, "client/build")));
   app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
