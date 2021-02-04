@@ -1,4 +1,4 @@
-My version lives at https://frimmy-crwn-clothing.netlify.app/ - using netlify was performant than heroku :shrugs: 
+My version lives at https://frimmy-crwn-clothing.netlify.app/ - using netlify was more performant than heroku :shrugs: 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
