@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(checkUserSession());
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
     <div>
@@ -31,19 +31,12 @@ const App = () => {
           exact
           path="/signin"
           render={() => {
-            return currentUser ? (
-              <Redirect to="/" />
-            ) : (
-              <SignInAndSignUp />
-            );
+            return currentUser ? <Redirect to="/" /> : <SignInAndSignUp />;
           }}
         />
       </Switch>
     </div>
   );
-}
-// const mapStateToProps = createStructuredSelector({
-//   currentUser: selectCurrentUser,
-// });
+};
 
 export default App;
