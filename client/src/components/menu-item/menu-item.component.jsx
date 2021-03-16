@@ -6,7 +6,7 @@ import styles from './menu-item.module.scss';
 const cx = classnames.bind(styles);
 
 const MenuItem = ({ title, imageUrl, id, size, linkUrl, history, match }) => (
-  <div className={cx(size, 'menu-item')} onClick={() => history.push(`${match.url}${linkUrl}`)}>
+  <div className={cx('menu-item', size ? `menu-item--${size}` : '' )} onClick={() => history.push(`${match.url}${linkUrl}`)}>
     <div className={styles["background-image"]} style={{
       backgroundImage: `url(${imageUrl})`
     }}/>
