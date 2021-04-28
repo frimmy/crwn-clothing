@@ -6,7 +6,7 @@ import styles from './cart-item.module.scss'
 
 export const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
   <div className={styles['cart-item']}>
-    <img className={styles.img} src={imageUrl} alt="item"/>
+    <img className={styles.img} src={imageUrl} alt="item" />
     <div className={styles["item-details"]}>
       <span className={styles["name"]}>{name}</span>
       <span className={styles["price"]}>
@@ -14,4 +14,6 @@ export const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
       </span>
     </div>
   </div>
-)
+);
+
+export default React.memo(CartItem);
